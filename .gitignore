@@ -86,8 +86,8 @@ data/
 .idea
 
 # custom Sentry config
-sentry/sentry.conf.py
-sentry/config.yml
+# sentry/sentry.conf.py
+# sentry/config.yml
 sentry/*.bak
 sentry/enhance-image.sh
 sentry/requirements.txt

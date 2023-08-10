@@ -340,23 +340,6 @@ services:
         BASE_IMAGE: sentry-self-hosted-local
     entrypoint: "/entrypoint.sh"
     command: '"0 0 * * * gosu sentry sentry cleanup --days $SENTRY_EVENT_RETENTION_DAYS"'
-  nginx:
-    <<: *restart_policy
-    ports:
-      - "$SENTRY_BIND:80/tcp"
-      - "443:443"
-    image: "nginx:1.25.1-alpine"
-    volumes:
-      - type: bind
-        read_only: true
-        source: ./nginx
-        target: /etc/nginx
-      - sentry-nginx-cache:/var/cache/nginx
-      - /etc/letsencrypt:/cert
-      - /etc/ecs/user/certs:/certs
-    depends_on:
-      - web
-      - relay
   relay:
     <<: *restart_policy
     image: "$RELAY_IMAGE"
@@ -427,7 +410,6 @@ volumes:
   # That said, volumes will be persisted across restarts until they are deleted.
   sentry-secrets:
   sentry-smtp:
-  sentry-nginx-cache:
   sentry-zookeeper-log:
   sentry-kafka-log:
   sentry-smtp-log:

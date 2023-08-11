@@ -7,11 +7,11 @@
 # Mail Server #
 ###############
 
-# mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
+mail.backend: "smtp"
 mail.host: "smtp.gmail.com"
 mail.port: <mail-port>
-mail.username: <mail-username>
-mail.password: <mail-password>
+mail.username: "<mail-username>"
+mail.password: "<mail-password>"
 mail.use-tls: true
 mail.use-ssl: false
 

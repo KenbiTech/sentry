@@ -8,7 +8,7 @@
 ###############
 
 # mail.backend: 'smtp'  # Use dummy if you want to disable email entirely
-mail.host: "smtp"
+mail.host: "smtp.gmail.com"
 mail.port: <mail-port>
 mail.username: <mail-username>
 mail.password: <mail-password>
@@ -91,20 +91,14 @@ transaction-events.force-disable-internal-project: true
 
 # Refer to https://develop.sentry.dev/integrations/github/ for setup instructions.
 
-# github-login.extended-permissions: ['repo']
-# github-app.id: GITHUB_APP_ID
-# github-app.name: 'GITHUB_APP_NAME'
-# github-app.webhook-secret: 'GITHUB_WEBHOOK_SECRET' # Use only if configured in GitHub
-# github-app.client-id: 'GITHUB_CLIENT_ID'
-# github-app.client-secret: 'GITHUB_CLIENT_SECRET'
-# github-app.private-key: |
-#   -----BEGIN RSA PRIVATE KEY-----
-#   privatekeyprivatekeyprivatekeyprivatekey
-#   privatekeyprivatekeyprivatekeyprivatekey
-#   privatekeyprivatekeyprivatekeyprivatekey
-#   privatekeyprivatekeyprivatekeyprivatekey
-#   privatekeyprivatekeyprivatekeyprivatekey
-#   -----END RSA PRIVATE KEY-----
+github-login.extended-permissions: ["repo"]
+github-app.id: <github-app-id>
+github-app.name: <github-app-name>
+github-app.webhook-secret: <github-webhook-secret> # Use only if configured in GitHub
+github-app.client-id: <github-client-id>
+github-app.client-secret: <github-client-secret>
+github-app.private-key: |
+  <github-private-key>
 
 #####################
 # Slack Integration #

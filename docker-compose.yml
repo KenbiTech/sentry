@@ -354,6 +354,8 @@ services:
   relay:
     <<: *restart_policy
     image: "$RELAY_IMAGE"
+    ports:
+      - '3000:3000/tcp'
     volumes:
       - type: bind
         read_only: true

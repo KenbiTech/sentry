@@ -44,6 +44,7 @@ mail.list-namespace: "kenbi.de"
 ###################
 
 system.url-prefix: https://<domain>
+system.internal-url-prefix: https://<domain>
 
 # If this file ever becomes compromised, it's important to generate a new key.
 # Changing this value will result in all current sessions being invalidated.
@@ -79,7 +80,6 @@ releasefile.cache-path: "/data/releasefile-cache"
 #   secret_key: 'XXXXXXX'
 #   bucket_name: 's3-bucket-name'
 
-system.internal-url-prefix: "http://web:8000"
 symbolicator.enabled: true
 symbolicator.options:
   url: "http://symbolicator:3021"
